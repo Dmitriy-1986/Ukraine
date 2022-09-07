@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: sans-serif;
+
+        }
+
+        body {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            margin: 0;
+            text-align: center;
+            padding: 20px;
+        }
+
+        #close {
+            cursor: pointer;
+            margin: 5px;
+            border: 1px solid red;
+            color: red;
+            padding: 3px 6px;
+        }
+
+
+        .country {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 177px;
+            color: #37b2f0;
+        }
+
+        @media (max-width: 1000px) {
+            .country {
+                font-size: 100px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .country {
+                font-size: 77px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .country {
+                font-size: 50px;
+            }
+        }
+
+        @media (max-width: 300px) {
+            .country {
+                font-size: 35px;
+            }
+        }
+
+        @media (max-width: 300px) {
+            .country {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="title">Hello world!<span id="close">&#x2715</span></h1>
+
+
+    <script>
+        const title = document.getElementById('title');
+        const close = document.getElementById('close');
+
+        close.addEventListener('click', () => {
+            title.hidden = true;
+            document.body.style.background = 'linear-gradient(0deg, rgba(236,255,0,1) 0%, rgba(9,9,121,1) 75%, rgba(9,9,121,1) 100%)';
+            document.body.innerHTML = '<h1 class="country">UKRAINE</h1>';
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>
